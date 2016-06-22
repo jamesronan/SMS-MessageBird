@@ -4,7 +4,6 @@ use 5.006;
 use strict;
 use warnings;
 
-use Data::Dump;
 use LWP::UserAgent;
 use JSON;
 

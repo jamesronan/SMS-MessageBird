@@ -3,7 +3,6 @@ package SMS::MessageBird::API;
 use strict;
 use warnings;
 
-use Data::Dump;
 use LWP::UserAgent;
 use JSON;
 
@@ -44,9 +43,6 @@ sub new {
 
     $self->{api_url}
         = $params{api_url} || 'https://rest.messagebird.com';
-
-    $self->{debug} = $params{debug} || 0;
-    warn "Debug mode enabled." if $self->{debug};
 
     $self->{ua} = LWP::UserAgent->new(
         agent           => "Perl/SMS::MessageBird/$VERSION",
