@@ -45,12 +45,12 @@ Gateway API.
 
 =head1 DESCRIPTION
 
-This module provides simple Perl interface to the MessageBird JSON API. It
+This module provides a simple Perl interface to the MessageBird JSON API. It
 deals with the JSON stuff allowing you to get back useful Perl data.
 
 To use this module you'll need an account with
 L<MessageBird|https://www.messagebird.com/>. Once you have that,
-you can create an API key on your account and feed it to thie module which will
+you can create an API key on your account and feed it to this module which will
 authenticate with their API using that key.
 
 The methods implmented acceept the paramteres as named in the MessageBird API
@@ -67,7 +67,7 @@ Use of the functionality of a given module, is done via the accessor for that
 module, thus:
 
     my $result = $messagebird->sms->send(...);
-    my $balance = $messagebird->balace->get();
+    my $balance = $messagebird->balance->get();
     ...
 
 =head3 Available Modules
@@ -124,7 +124,7 @@ are as follows:
 Required. The MessageBird account API key used for authentication with
 MessageBird's API.
 
-=item originiator
+=item originator
 
 As per the MessageBird documentation, all sending functionality requires an
 originator. This can be set once on the SMS::MessageBird object and passed to
@@ -132,7 +132,7 @@ all the module methods. This can be set later using the originator() mutator.
 
 =item api_url
 
-If for some reason you need to use some from of local HTTP proxy / forwarder
+If for some reason you need to use some form of local HTTP proxy / forwarder
 this parameter can be used to specifiy the alternate address. If it is omittied
 the default is MessageBird's URL I<https://rest.messagebird.com>.
 
