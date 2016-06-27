@@ -9,6 +9,10 @@ use JSON;
 
 use SMS::MessageBird::API::SMS;
 use SMS::MessageBird::API::Voice;
+use SMS::MessageBird::API::Verify;
+use SMS::MessageBird::API::HLR;
+use SMS::MessageBird::API::Balance;
+use SMS::MessageBird::API::Lookup;
 
 =head1 NAME
 
@@ -151,6 +155,7 @@ sub new {
     my $self = bless {
         module_data => {
             api_key => $params{api_key},
+            api_url => 'https://rest.messagebird.com',
         },
     } => ($package || 'SMS::MessageBird');
 
@@ -235,8 +240,12 @@ sub _load_modules {
     $self->{loaded_modules} = undef;
 
     my %modules = (
-        sms   => 'SMS::MessageBird::API::SMS',
-        voice => 'SMS::MessageBird::API::Voice',
+        sms     => 'SMS::MessageBird::API::SMS',
+        voice   => 'SMS::MessageBird::API::Voice',
+        verify  => 'SMS::MessageBird::API::Verify',
+        hlr     => 'SMS::MessageBird::API::HLR',
+        balance => 'SMS::MessageBird::API::Balance',
+        lookup  => 'SMS::MessageBird::API::Lookup',
     );
 
     no strict 'refs';

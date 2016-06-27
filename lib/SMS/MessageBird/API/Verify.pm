@@ -8,7 +8,7 @@ use parent 'SMS::MessageBird::API';
 sub send {
     my ($self, %params) = @_;
 
-    return $self->_no_param_supplied('recipient'); if !exists $params{recipient};
+    return $self->_no_param_supplied('recipient') if !exists $params{recipient};
 
     return $self->_api_request(
         post => "/verify",
@@ -19,7 +19,7 @@ sub send {
 sub verify {
     my ($self, $verify_id) = @_;
 
-    return $self->_no_param_supplied('verify_id'); if !$verify_id;
+    return $self->_no_param_supplied('verify_id') if !$verify_id;
 
     return $self->_api_request( get => "/verify/$verify_id" );
 }
