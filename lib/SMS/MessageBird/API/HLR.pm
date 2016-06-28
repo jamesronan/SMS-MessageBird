@@ -166,6 +166,9 @@ or through the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue
 I will be notified, and then you'll automatically be notified of progress on your
 bug as I make changes.
 
+Alternatively you can raise an issue on the source code which is available on
+L<GitHub|https://github.com/jamesronan/SMS-MessageBird>.
+
 =head1 LICENSE AND COPYRIGHT
 
 Copyright 2016 James Ronan.
