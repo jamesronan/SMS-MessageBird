@@ -76,6 +76,8 @@ module, thus:
 
 =head3 Available Modules
 
+=over
+
 =item sms
 
 This is the accessor for the L<SMS::MessageBird::API::SMS> module. Used for
@@ -106,6 +108,7 @@ retrieve your MessageBird account balance.
 This is the accessor for the L<SMS::MessageBird::API::Lookup> module. Used to
 validate phone numbers, and provide optional formats for that number.
 
+=back
 
 
 =head1 METHODS
