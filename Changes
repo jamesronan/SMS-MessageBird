@@ -1,5 +1,6 @@
 Revision history for SMS-MessageBird
 
-0.01    Date/time
-        First version, released on an unsuspecting world.
+0.01    Initial release of distribution.
+        Most of the API implemented, except the new
+        beta "Chat API"
 
