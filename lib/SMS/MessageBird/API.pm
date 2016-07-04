@@ -13,11 +13,11 @@ SMS::MessageBird::API - Provides API integration base for SMS::MessageBird.
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 =head1 METHODS

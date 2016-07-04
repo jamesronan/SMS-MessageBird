@@ -8,7 +8,7 @@ WriteMakefile(
     AUTHOR           => q{James Ronan <james@ronanweb.co.uk>},
     VERSION_FROM     => 'lib/SMS/MessageBird.pm',
     ABSTRACT_FROM    => 'lib/SMS/MessageBird.pm',
-    LICENSE          => 'artistic_2',
+    LICENSE          => 'perl_5',
     PL_FILES         => {},
     MIN_PERL_VERSION => 5.006,
     CONFIGURE_REQUIRES => {
@@ -18,8 +18,8 @@ WriteMakefile(
         'Test::More' => 0,
     },
     PREREQ_PM => {
-        #'ABC'              => 1.6,
-        #'Foo::Bar::Module' => 5.0401,
+        'JSON'           => 0,
+        'LWP::UserAgent' => 0,
     },
     dist  => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean => { FILES => 'SMS-MessageBird-*' },
