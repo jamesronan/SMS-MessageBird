@@ -98,7 +98,9 @@ for more information.
 sub send {
     my ($self, %params) = @_;
 
-    $params{originator} //= $self->{originator};
+    if (!exists $params{originator}) {
+        $params{originator} = $self->{originator};
+    }
 
     return $self->_api_request(
         post => '/messages',
