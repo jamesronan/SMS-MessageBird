@@ -146,6 +146,25 @@ sub get {
 }
 
 
+=head2 search
+
+ In: %filters - Hashref of filter key / data pairs
+ Out: $response - Hashref of reponse data. See "Response Data" above.
+
+Search sent messages by criterion rather than getting a specifc message by id.
+
+Please see the L<MessageBird API Documentation for message filtering|https://developers.messagebird.com/api/sms-messaging#list-messages>
+for a complete list of filters.
+
+=cut
+
+sub search {
+    my ($self, %filters) = @_;
+
+    return $self->_api_request( get => '/messages', \%filters );
+}
+
+
 =head2 remove
 
   In: $message_id - The message_id to remove.
