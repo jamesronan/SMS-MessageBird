@@ -3,6 +3,7 @@ package SMS::MessageBird::API;
 use strict;
 use warnings;
 
+use Encode qw( encode_utf8 );
 use LWP::UserAgent;
 use JSON;
 use URI;
@@ -155,8 +156,8 @@ sub _api_request {
 
             my $content_payload = JSON->new->encode($data);
 
-            $request_params{'Content-Type'} = 'application/json',
-            $request_params{Content} = $content_payload;
+            $request_params{'Content-Type'} = 'application/json;charset=utf-8',
+            $request_params{Content} = Encode::encode_utf8($content_payload);
         }
     }
 
